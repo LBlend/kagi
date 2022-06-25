@@ -72,3 +72,6 @@
 
 
 
+## Future work
+
+As mentioned previously in this README. There's some undefined behaviour in the program. In order to work these out I would like to rewrite the entire program in Rust. This is benefitial both for its fearless concurrency but also its performance improvements, which is important to consider when running on shitty little devices like the Raspberry Pi.
