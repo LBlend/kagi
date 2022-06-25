@@ -57,3 +57,14 @@
 
 
 
+## Privacy
+
+**What information is stored?**
+
+- Logs every card read locally
+    - This includes the current time of day, your card id and the status of your card reading. This status can be whether or not you were granted access and why.
+- Stores your card id, passcode (salted, peppered and hashed) and optionally your name in the database.
+    - This database may be located on another machine.
+    - Note that your name is manually entered by human person into the database.
+
+
