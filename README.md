@@ -30,3 +30,30 @@
 - Internet connection (duh)
 - SSH (recommended)
 
+
+### Setup
+
+#### Connecting the parts
+
+
+
+### Database
+
+
+
+### Software
+
+
+
+## Security
+
+
+
+### Attack surface
+
+
+
+### Undefined behaviour - Data races
+
+
+
