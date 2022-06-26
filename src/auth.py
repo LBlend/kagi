@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import keyboard
 import logging
 import multiprocessing
-from os import getenv
+import os
 import psycopg2
 from time import sleep
 
@@ -11,10 +11,10 @@ from time import sleep
 load_dotenv()
 
 connection = psycopg2.connect(
-    host=getenv("KAGI_DB_HOST"),
-    dbname=getenv("KAGI_DB_NAME"),
-    user=getenv("KAGI_DB_USERNAME"),
-    password=getenv("KAGI_DB_PASSWORD")
+    host=os.getenv("KAGI_DB_HOST"),
+    dbname=os.getenv("KAGI_DB_NAME"),
+    user=os.getenv("KAGI_DB_USERNAME"),
+    password=os.getenv("KAGI_DB_PASSWORD")
 )
 
 codes = {}
@@ -96,6 +96,7 @@ def _get_input(code: dict[str, str]) -> None:
     while character < 4:
         event = keyboard.read_event()
         if event.event_type == keyboard.KEY_DOWN:
+            os.system("cls" if os.name == "nt" else "clear")  # Clear user input from console output
             # beep sound
             code[character] = event.name
             character += 1
