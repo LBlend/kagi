@@ -81,9 +81,9 @@ def verify_code(card_id: str, code: list[str], pepper: str) -> bool:
         logging.info(f"DENIED | {card_id} | Not a numbered code")
         return False
     else:
-        code = str(code + pepper).encode("utf-8")
+        code = (str(code) + pepper).encode("utf-8")
 
-        if bcrypt.checkpw(code, codes.get(card_id)):
+        if bcrypt.checkpw(code, codes.get(card_id).encode("utf-8")):
             logging.info(f"GRANTED | {card_id} | Access granted")
             return True
         else:
