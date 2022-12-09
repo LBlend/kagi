@@ -1,5 +1,7 @@
 # kagi
 
+**This codebase is hot steaming garbage. Not only that, it is error prone as fuck. WIP**
+
 *A RFID based key box*
 
 
